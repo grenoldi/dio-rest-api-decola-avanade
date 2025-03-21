@@ -52,10 +52,10 @@
             +double convertedValue
         }
     
-        User --> Address
-        User --> Account
-        User --> "0..*" Sensor
-        Sensor --> Reading
-        Sensor --> "0..*" Reading : readingHistory
+        User "1" *-- "1" Address
+        User "1" *-- "1" Account
+        User *-- "N" Sensor
+        Sensor *-- Reading
+        Sensor *-- "N" Reading : readingHistory
 
 ```
